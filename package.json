@@ -1,18 +1,18 @@
 {
-  "name": "project-manager",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
+  "name": "roles-manager",
+  "version": "1.0.1",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
-    "build-only": "vite build",
+    "build-only": "vite build --base=/roles-manager/",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
+    "ls": "git ls-files --cached",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
