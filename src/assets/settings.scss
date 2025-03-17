@@ -1,0 +1,15 @@
+@use 'vuetify/settings' with (
+  $sheet-background: #e3f9fc,
+  $table-background: transparent,
+  $label-font-size: 13px,
+  $button-height: 28px,
+  $button-background: transparent,
+  $icon-sizes: (
+    'x-small': 18px,
+    'small': 20px,
+    'default': 24px,
+    'large': 28px,
+    'x-large': 32px,
+  ),
+  $button-icon-font-size: 1rem
+);
