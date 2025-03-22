@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Colors } from '@/enums/colors'
+import { Colors } from '@/configs/colors'
 </script>
 
 <template>

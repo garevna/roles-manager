@@ -60,9 +60,6 @@ function setFullListOfChildRoles() {
         <td style="vertical-align: top">
           <v-table density="compact">
             <tr v-for="id in listOfChildRoles" :key="id">
-              {{
-                id
-              }}
               <td>
                 <v-checkbox
                   :label="roles[id]"
@@ -99,4 +96,6 @@ function setFullListOfChildRoles() {
   </v-table>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

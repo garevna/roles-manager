@@ -4,17 +4,19 @@ export const fakeRoleList: GetRoleListModel[] = [
   {
     id: 1,
     name: 'Директор',
-    description: '..............Директор',
+    description:
+      'Tirant lo Blanc is a chivalry novel written by Joanot Martorell and published in 1490.',
     homepage: '/personel',
     tags: ['manager'],
-    child_roles: [1, 2, 3],
+    child_roles: [2, 3, 5],
     parent_roles: [],
     usercount: 1,
   },
   {
     id: 2,
     name: 'Начальник відділу',
-    description: '..............Начальник відділу',
+    description:
+      'The Odyssey is a classic ancient Greek epic poem written by Homer around 8th century BC.',
     homepage: '/personel',
     tags: ['manager', 'order', 'rule'],
     child_roles: [3, 4],
@@ -22,9 +24,10 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 1,
   },
   {
-    id: 3,
+    id: 10,
     name: 'Комірник',
-    description: '..............Комірник',
+    description:
+      'The Art of War is an ancient Chinese military text written by Sun Tzu around the 5th century BC.',
     homepage: '/personel',
     tags: ['store', 'commodities'],
     child_roles: [],
@@ -32,9 +35,10 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 2,
   },
   {
-    id: 4,
+    id: 9,
     name: 'Синхронізатор',
-    description: '..............Синхронізатор',
+    description:
+      'One Thousand and One Nights is a collection of histories and tales compiled over the 8th century to the 13th century.',
     homepage: '/personel',
     tags: ['sync', 'supply'],
     child_roles: [],
@@ -42,9 +46,10 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 2,
   },
   {
-    id: 5,
+    id: 8,
     name: 'Касир',
-    description: '..............Касир',
+    description:
+      'Chandrakanta is an epic fantasy Hindi novel by Devaki Nandan Khatri, published in 1888.',
     homepage: '/personel',
     tags: ['cash'],
     child_roles: [],
@@ -52,9 +57,9 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 1,
   },
   {
-    id: 6,
+    id: 7,
     name: 'Диспетчер',
-    description: '..............Диспетчер',
+    description: 'Duis a arcu convallis, gravida purus eget, mollis diam.',
     homepage: '/personel',
     tags: ['log'],
     child_roles: [],
@@ -62,19 +67,21 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 3,
   },
   {
-    id: 7,
+    id: 6,
     name: 'Логіст',
-    description: '..............Логіст',
+    description:
+      'The Count of Monte Cristo is an adventure novel written by Alexandre Dumas in 1844.',
     homepage: '/personel',
     tags: ['log'],
-    child_roles: [6],
+    child_roles: [],
     parent_roles: [1],
     usercount: 2,
   },
   {
-    id: 8,
+    id: 5,
     name: 'Аудитор',
-    description: '..............Аудитор',
+    description:
+      'The Sorrows of Young Werther is a novel in form of a collection of letters by Johann Wolfgang Goethe published in 1774.',
     homepage: '/personel',
     tags: ['audit'],
     child_roles: [],
@@ -82,9 +89,10 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 1,
   },
   {
-    id: 9,
+    id: 12,
     name: 'Торговий агент',
-    description: '..............Торговий агент',
+    description:
+      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
     homepage: '/personel',
     tags: ['sales'],
     child_roles: [],
@@ -92,9 +100,9 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 30,
   },
   {
-    id: 10,
+    id: 11,
     name: 'Регіональний торговий представник',
-    description: '..............Регіональний торговий представник',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     homepage: '/personel',
     tags: ['sales'],
     child_roles: [9],
@@ -102,9 +110,10 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 5,
   },
   {
-    id: 11,
+    id: 4,
     name: 'Бухгалтер',
-    description: '..............Бухгалтер',
+    description:
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
     homepage: '/personel',
     tags: ['sales'],
     child_roles: [],
@@ -112,13 +121,135 @@ export const fakeRoleList: GetRoleListModel[] = [
     usercount: 1,
   },
   {
-    id: 12,
+    id: 3,
     name: 'Секретар',
-    description: '..............Секретар',
+    description:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     homepage: '/personel',
     tags: ['sales'],
     child_roles: [],
     parent_roles: [1],
-    usercount: 1,
+    usercount: 3,
+  },
+  {
+    id: 13,
+    name: 'Охоронник',
+    description:
+      'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...',
+    homepage: '/personel',
+    tags: ['security'],
+    child_roles: [],
+    parent_roles: [1],
+    usercount: 12,
+  },
+  {
+    id: 14,
+    name: 'Електрик',
+    description:
+      'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.',
+    homepage: '/personel',
+    tags: ['Господарський відділ'],
+    child_roles: [],
+    parent_roles: [1],
+    usercount: 4,
+  },
+  {
+    id: 15,
+    name: 'Вахтер',
+    description:
+      'The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.',
+    homepage: '/personel',
+    tags: ['Господарський відділ'],
+    child_roles: [],
+    parent_roles: [2],
+    usercount: 5,
+  },
+  {
+    id: 16,
+    name: 'Прибиральниця',
+    description:
+      'Equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.',
+    homepage: '/personel',
+    tags: ['Господарський відділ'],
+    child_roles: [],
+    parent_roles: [2],
+    usercount: 5,
+  },
+  {
+    id: 17,
+    name: 'Фінансист',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    homepage: '/personel',
+    tags: ['finance', 'assets'],
+    child_roles: [],
+    parent_roles: [1],
+    usercount: 5,
+  },
+  {
+    id: 18,
+    name: 'Зав. складом',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    homepage: '/personel',
+    tags: ['stocks'],
+    child_roles: [10],
+    parent_roles: [2],
+    usercount: 5,
+  },
+  {
+    id: 19,
+    name: 'Слюсар',
+    description:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+    homepage: '/personel',
+    tags: ['Господарський відділ'],
+    child_roles: [],
+    parent_roles: [2],
+    usercount: 3,
+  },
+  {
+    id: 20,
+    name: 'Сторож',
+    description:
+      'But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.',
+    homepage: '/personel',
+    tags: ['Господарський відділ'],
+    child_roles: [],
+    parent_roles: [2],
+    usercount: 8,
+  },
+  {
+    id: 21,
+    name: 'Акціонер',
+    description:
+      'But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?',
+    homepage: '/personel',
+    tags: ['shareholder', 'stocks', 'assets'],
+    child_roles: [],
+    parent_roles: [],
+    usercount: 16,
+  },
+  {
+    id: 22,
+    name: 'Роботяга',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    homepage: '/personel',
+    tags: ['job', 'worker'],
+    child_roles: [],
+    parent_roles: [1, 2],
+    usercount: 11,
+  },
+  {
+    id: 23,
+    name: 'Спонсор',
+    description:
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',
+    homepage: '/personel',
+    tags: ['stocks', 'funds', 'assets'],
+    child_roles: [],
+    parent_roles: [1, 2],
+    usercount: 11,
   },
 ]

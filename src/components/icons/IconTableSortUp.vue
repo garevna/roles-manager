@@ -1,6 +1,6 @@
 <!-- This icon is from <https://github.com/Templarian/MaterialDesign>, distributed under Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0) license-->
 <script setup lang="ts">
-import { Colors } from '@/enums/colors'
+import { Colors } from '@/configs/colors'
 </script>
 
 <template>

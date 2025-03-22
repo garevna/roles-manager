@@ -7,15 +7,18 @@ import { useRoleStore } from '@/stores/roles'
 
 const store = useRoleStore()
 
-// const props = defineProps({
-//   id: Number,
-// })
+const props = defineProps({
+  id: {
+    type: Number,
+    required: true
+  },
+})
 
 // const role = store.roleList.find((role) => role.id === props.id) || emptyRole
 
 // const item: Reactive<GetRoleListModel> = reactive(role)
 
-const users = store.getRoleUsers()
+const users = store.getRoleUsers(props.id)
 </script>
 
 <template>
@@ -45,7 +48,7 @@ th {
 }
 td,
 th {
-  border: solid 1px #dde;
+  border: var(--v-td-border-style) 1px var(--v-td-border-color);
   padding: 4px 8px;
 }
 </style>

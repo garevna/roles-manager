@@ -1,5 +1,5 @@
 @use 'vuetify/settings' with (
-  $sheet-background: #e3f9fc,
+  $sheet-background: #5892,
   $table-background: transparent,
   $label-font-size: 13px,
   $button-height: 28px,
@@ -11,5 +11,14 @@
     'large': 28px,
     'x-large': 32px,
   ),
-  $button-icon-font-size: 1rem
+  $button-icon-font-size: 1rem,
+  $chip-background: #e6ecef,
+  $chip-border-color: #9ab,
+  $chip-border-style: solid,
+  $chip-border-width: 1px,
+  $chip-border-radius: 6px,
+  $chip-font-size: 12px,
+  $chip-color: #f00,
+  $chip-close-size: 16px,
+  $chip-height: 24px
 );

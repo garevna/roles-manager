@@ -11,6 +11,8 @@ export const useRoleStore = defineStore('roles', () => {
 
   const roleList = reactive(fakeRoleList)
 
+  addActiveUsersNumberToEachRole()
+
   const expanded: Reactive<{ [key: number]: 'ierarchy' | 'tags' | 'users' | null }> =
     roleList.reduce((res, role) => Object.assign(res, { [role.id]: null }), {})
 
@@ -24,24 +26,14 @@ export const useRoleStore = defineStore('roles', () => {
     expanded[item.id] = null
   }
 
-  function setIerarchyExpanded(item: GetRoleListModel) {
-    expanded[item.id] = expanded[item.id] === 'ierarchy' ? null : 'ierarchy'
+  function setExpanded(mode: 'ierarchy' | 'tags' | 'users' | null, item: GetRoleListModel) {
+    if (!mode) return
+    if (expanded[item.id] && expanded[item.id] !== mode) return
+    expanded[item.id] = !expanded[item.id] ? mode : null
   }
 
-  function setUsersExpanded(item: GetRoleListModel) {
-    expanded[item.id] = expanded[item.id] === 'users' ? null : 'users'
-  }
-
-  function setTagsExpanded(item: GetRoleListModel) {
-    expanded[item.id] = expanded[item.id] === 'tags' ? null : 'tags'
-  }
-
-  function getRoleById(id: number) {
-    return roleList.find((role: GetRoleListModel) => role.id === id) || null
-  }
-
-  function getRoleUsers(/* item: GetRoleListModel */) {
-    return fakeUsers
+  function getRoleUsers(roleId: number) {
+    return fakeUsers.filter((user) => user.role === roleId)
   }
 
   function updateChilds(role: GetRoleListModel, childId?: number): void {
@@ -64,6 +56,13 @@ export const useRoleStore = defineStore('roles', () => {
     if (index !== -1) role.tags.splice(index, 1)
   }
 
+  function addActiveUsersNumberToEachRole() {
+    roleList.forEach((role) => {
+      const users = fakeUsers.filter((user) => user.role === role.id).length
+      role.usercount = users
+    })
+  }
+
   return {
     rolesTotal,
     notificationsTotal,
@@ -71,11 +70,8 @@ export const useRoleStore = defineStore('roles', () => {
     expanded,
     resetExpanded,
     resetExpandeAll,
-    getRoleById,
     getRoleUsers,
-    setIerarchyExpanded,
-    setUsersExpanded,
-    setTagsExpanded,
+    setExpanded,
     updateChilds,
     updateParents,
     removeRoleTag,

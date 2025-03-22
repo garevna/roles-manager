@@ -1,3 +1,16 @@
+:root {
+  --v-chip-color: #789;
+  --v-chip-compact-height: 24px;
+  --v-chip-height: 32px;
+  --v-chip-font-size: 12px;
+  --v-chip-padding: 0 8px;
+  --v-table-header-background: #eff5f9;
+  --v-rss-icon-background: #578;
+  --v-rss-icon-border-color: #e00;
+  --v-trash-icon-color: #900;
+  --v-td-border-color: #9ab;
+  --v-td-border-style: dotted;
+}
 *,
 *::before,
 *::after {
@@ -6,35 +19,69 @@
   font-weight: normal;
 }
 
+nav {
+  margin-left: 12px !important;
+  font-size: 1rem;
+  padding: 0 0 !important;
+  margin-top: 0 !important;
+}
+
 .v-icon__svg {
   fill: transparent !important;
 }
 
-.v-input--density-compact {
-  --v-input-control-height: 28px !important;
+.v-data-table-footer {
+  justify-content: space-between;
+  background: var(--v-table-header-background);
+  padding: 0 32px 0 0;
 }
 
-.v-field__input {
-  min-height: 24px !important;
-  height: 24px !important;
-  font-size: 14px !important;
+.v-data-table .v-table__wrapper > table > thead > tr th {
+  font-size: 12px;
+  padding: 8px;
 }
 
-.v-chip.v-chip--size-small {
-  font-size: 10px !important;
+td {
+  font-size: 14px;
+}
+
+.v-chip {
+  font-size: var(--v-chip-font-size);
+  color: var(--v-chip-color);
+  padding: var(--v-chip-padding);
+}
+
+.v-chip.v-chip--density-compact {
+  min-height: var(--v-chip-compact-height);
+}
+
+.v-chip.v-chip--density-default {
+  --v-chip-height: var(--v-chip-height);
+}
+
+.v-field.v-field--no-label.v-field--variant-outlined > .v-field__field {
+  min-height: 24px;
+  max-height: 28px;
+}
+
+.v-field.v-field--no-label.v-field--variant-outlined > .v-field__field > .v-field__input {
+  min-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 12px;
 }
 
 .checkbox-small .v-selection-control__input > .v-icon {
-  font-size: 20px !important;
+  font-size: 20px;
 }
 
 .v-table__wrapper thead {
-  background-color: #d4eff4 !important;
-  border-radius: 0% !important;
+  background-color: var(--v-table-header-background);
+  border-radius: 0%;
 }
 
 .v-sheet .v-theme--light .v-sheet--border .rounded-lg {
-  border-radius: 0 !important;
+  border-radius: 0;
 }
 
 body {

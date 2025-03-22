@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RolesTable from '@/views/RolesTable.vue'
+import '@/assets/base.css'
 // import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -9,7 +10,7 @@ import RolesTable from '@/views/RolesTable.vue'
   </main>
 </template>
 
-<style scoped>
+<style>
 main {
   width: 100vw;
   height: 100vh;
